@@ -110,11 +110,41 @@ body {
   width: auto;
 }
 
+.intro {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    height: auto;
+    width: auto;
+    color: #fff;
+}
+
+.intro h1 {
+    font-size: 3em;
+    margin: 0;
+    font-family: 'Righteous', sans-serif;
+    letter-spacing: .05em
+}
+
+.intro p {
+    border-bottom: 3px dotted rgba(102, 136, 187, .7);
+    padding-bottom: 3%;
+    margin-bottom: 4%;
+}
+
+.intro p span {
+  font-family: 'Righteous', sans-serif;
+
+
+}
+
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
   display: flex;
   justify-content: center;
   font-weight: 400;
+  ;
 }
 
 .div-1, .div-2, .div-3 {
@@ -134,7 +164,7 @@ body {
   margin: 1.5px;
 }
 
-span, a {
+.wrapper span, a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,22 +178,54 @@ span, a {
 
 }
 
-a {
+.wrapper a {
+
     font-size: .74em;
     border: 1.5px solid #68B;
     padding: 1.4%;
     margin: 1%;
-    font-weight: 799;
+    font-weight: 700;
+    color: rgba(255, 255, 255, .8);
+
 }
 
 
 .div-2 span {
     text-align: justify;
-    padding: 1.5% 2%
+    padding: 1.5% 2%;
 }
 
+footer {
+    display: flex;
+    flex-flow: row nowrap;
+}
 
+footer ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    padding: 2%;
+}
 
+footer ul li {
+    padding: 2%;
+    margin: 0 7%;
+    justify-content: flex-start;
+    border:  1px solid #68B  ;
+    border-radius: 9em;
+    background-color: #68B;
+}
+
+footer ul li a {
+    border-style: none;
+}
+
+footer ul li a img {
+    opacity: .7;
+    -webkit-filter: grayscale(100%);
+    filter: brightness(500%);
+
+}
 
 /* ==========================================================================
    Helper classes
@@ -252,6 +314,20 @@ a {
         width: auto;
     }
 
+    .intro {
+        flex-flow: row wrap;
+        height: auto;
+        width: 100%;
+    }
+
+    .intro h1, .intro p {
+        flex-flow: row wrap;
+        width: 50%;
+        align-items: flex-end;
+        margin: 1% 0;
+        border: none;
+    }
+
     .wrapper {
         flex-flow: column nowrap;
         justify-content: center;
@@ -266,8 +342,57 @@ a {
         width: 100%;
         height: 100%;
         line-height: 2em;
+    }
 
 
+}
+
+@media (max-width: 650px) {
+
+    .intro {
+        align-items: flex-end;
+        flex-flow: column nowrap;
+        height: 100%;
+        width: auto;
+    }
+
+    .intro h1, .intro p {
+
+        flex-flow: column wrap;
+        width: 100%;
+        margin: 2% 0;
+        height: 40%;
+    }
+
+    .intro h1 {
+        border-bottom: solid 1px rgba(85, 85, 102, 0.9);
+        align-items: flex-end;
+        flex-shrink: 1;
+        line-height: 2.5em;
+    }
+
+    .intro p {
+        flex-shrink: 2;
+        line-height: 2em;
+        border-bottom: 3px dotted rgba(102, 136, 187, .7);
+        padding-bottom: 3%;
+        margin-bottom: 3%;
+
+    }
+}
+
+@media (max-width: 490px) {
+
+    .intro {
+        height: 100%;
+    }
+
+    .intro h1, .intro p {
+        height: auto;
+    }
+
+    .intro h1 {
+        line-height: normal;
     }
 }
 
